@@ -8,7 +8,6 @@ const Body = Matter.Body;
 const Render = Matter.Render;
 function preload()
 {
-	paperIMG=loadImage("paper.png");
 	
 }
 
@@ -26,8 +25,6 @@ function setup() {
 	//Create a Ground
 	ground = new Ground(600,height,1600,20);
 	paper=new Paper(200,450,40);
-	paper.scale=0.5
-	paper.addImage(paperIMG) 
 	dustbin=new Dustbin(1200,650);
 
 	 
@@ -39,8 +36,9 @@ function setup() {
 
 
 function draw() {
+  
+  background(255);
   rectMode(CENTER);
-  background(0);
   ground.display();
   paper.display();
   dustbin.display();
